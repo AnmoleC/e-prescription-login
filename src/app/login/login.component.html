@@ -1,0 +1,26 @@
+<form [formGroup]="loginForm" class="form-control" (ngSubmit)="onSubmit()">
+  
+  <label>
+    Username:
+    <input type="text" id="username" class="form-control" formControlName="username" required>
+
+  </label>
+
+  <label>
+    Password:
+    <input type="text" formControlName="password" required>
+  </label>
+
+  <label>
+    Role:
+    <select id="role" formControlName="role" required>
+      <option *ngFor="let role of roles" [ngValue]="role"> {{role}} </option>
+    </select>
+  </label>
+
+  <label>
+    <button type="submit">Submit</button>
+  </label>
+
+</form>
+
